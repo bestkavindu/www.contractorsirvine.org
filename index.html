@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irvine Home Remodeling | General Contractor Services</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa', // Very light teal
+                            100: '#ccfbf1', // Light teal
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6', // Primary Teal
+                            600: '#0d9488',
+                        },
+                        accent: {
+                            50: '#f0f9ff', // Very light blue
+                            100: '#e0f2fe',
+                            400: '#38bdf8', // Sky blue
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        },
+                        cta: {
+                            500: '#f97316', // Orange-500
+                            600: '#ea580c', // Orange-600
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(204, 251, 241, 0.5);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-slate-600 bg-brand-50 selection:bg-brand-200 selection:text-teal-900">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row justify-between items-center py-4 lg:h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center mb-4 lg:mb-0">
+                    <a href="#" class="flex items-center gap-2 group">
+                        <!-- Icon (Simple House/Water drop combo) -->
+                        <div
+                            class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
+                            <span class="font-bold text-2xl">I</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span
+                                class="text-2xl font-bold text-slate-800 tracking-tight leading-none group-hover:text-brand-600 transition-colors">
+                                Irvine <span class="text-brand-600">Remodeling</span>
+                            </span>
+                            <span class="text-[0.65rem] font-bold text-slate-400 tracking-[0.2em] uppercase">Irvine,
+                                CA</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="/"
+                        class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-brand-600 after:transition-all hover:after:w-full">Home</a>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors py-2">
+                            Services
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="w-4 h-4 transition-transform group-hover:rotate-180">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute left-0 mt-0 w-64 bg-white/95 backdrop-blur-md rounded-lg shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 overflow-hidden">
+                            <div class="py-2">
+                                <a href="/kitchen_remodeling.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 border-b border-slate-50 last:border-0 transition-colors">Kitchen
+                                    Remodeling</a>
+                                <a href="/bathroom_renovation.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 border-b border-slate-50 last:border-0 transition-colors">Bathroom
+                                    Renovation</a>
+                                <a href="/room_additions_adu.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 border-b border-slate-50 last:border-0 transition-colors">Room
+                                    Additions & ADU</a>
+                                <a href="/painting.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 border-b border-slate-50 last:border-0 transition-colors">Painting</a>
+                                <a href="/roofing.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 border-b border-slate-50 last:border-0 transition-colors">Roofing</a>
+                                <a href="/hardscape.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">Hardscape</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#about"
+                        class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">About Us</a>
+                    <a href="#projects"
+                        class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Projects</a>
+                    <a href="#contact"
+                        class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Contact</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="flex items-center gap-6 mt-4 lg:mt-0">
+                    <a href="tel:949-555-0123"
+                        class="hidden lg:flex items-center text-slate-700 font-bold hover:text-brand-600 transition-colors gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-500" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                        (949) 555-0123
+                    </a>
+                    <a href="#contact"
+                        class="px-6 py-3 bg-cta-500 hover:bg-cta-600 text-white rounded font-bold uppercase tracking-wide shadow-md transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
+                        Free Estimate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-[74px] lg:pt-[96px] h-screen min-h-[600px] flex items-center overflow-hidden">
+
+        <!-- 1. Full Screen Slider Background -->
+        <div id="hero-slider" class="absolute inset-0 w-full h-full z-0">
+            <!-- Slide 1 -->
+            <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 slide-img">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                    alt="Modern Luxury Kitchen" class="w-full h-full object-cover object-center">
+                <!-- Subtle Gradient Overlay for contrast -->
+                <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 slide-img">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                    alt="Spacious Living Room Remodel" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 slide-img">
+                <img src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+                    alt="Elegant Master Bathroom" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+            </div>
+        </div>
+
+        <!-- 2. Glassmorphism Content Card (Offset Left) -->
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pointer-events-none">
+            <div style="background-color: rgba(255, 255, 255, 0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);"
+                class="max-w-xl p-8 md:p-12 rounded-2xl shadow-2xl border border-white/40 pointer-events-auto transform transition-all hover:scale-[1.01] hover:shadow-3xl">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-brand-100 text-brand-700 font-bold text-xs uppercase tracking-wider mb-6 border border-brand-200">
+                    Premier General Contractor
+                </span>
+                <h1 class="text-4xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6 tracking-tight">
+                    Irvine <br>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-600">Remodeling</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed font-medium">
+                    Transforming homes in Irvine, CA with expert craftsmanship. From luxury kitchens to full home
+                    renovations, we build your dream space.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:555-123-4567"
+                        class="inline-flex justify-center items-center px-8 py-4 bg-cta-600 hover:bg-cta-500 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all uppercase tracking-wide group">
+                        Get a Free Estimate
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Indicators -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+            <button
+                class="w-3 h-3 rounded-full bg-white opacity-100 transition-all indicator shadow-md hover:scale-125 focus:outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-transparent"></button>
+            <button
+                class="w-3 h-3 rounded-full bg-white opacity-40 hover:opacity-100 transition-all indicator shadow-md hover:scale-125 focus:outline-none hover:ring-2 hover:ring-brand-500 hover:ring-offset-2 hover:ring-offset-transparent"></button>
+            <button
+                class="w-3 h-3 rounded-full bg-white opacity-40 hover:opacity-100 transition-all indicator shadow-md hover:scale-125 focus:outline-none hover:ring-2 hover:ring-brand-500 hover:ring-offset-2 hover:ring-offset-transparent"></button>
+        </div>
+
+    </section>
+
+    <script>
+        const slides = document.querySelectorAll('.slide-img');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('opacity-100');
+                slide.classList.add('opacity-0');
+
+                // Update indicators
+                if (indicators[i]) {
+                    indicators[i].classList.remove('opacity-100');
+                    indicators[i].classList.add('opacity-50');
+                }
+            });
+
+            if (slides[index]) {
+                slides[index].classList.remove('opacity-0');
+                slides[index].classList.add('opacity-100');
+            }
+
+            if (indicators[index]) {
+                indicators[index].classList.remove('opacity-50');
+                indicators[index].classList.add('opacity-100');
+            }
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Auto play
+        let slideInterval = setInterval(nextSlide, 5000);
+
+        // Click handlers for indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                currentSlide = index;
+                showSlide(currentSlide);
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+        });
+    </script>
+
+    <!-- Services / Usecases Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-2">Our Capabilities</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-800">Home Remodeling Services</h3>
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-500">
+                    Expert craftsmanship and design for every room in your house.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1: Kitchen Remodel -->
+                <div
+                    class="group relative p-8 bg-brand-50 rounded-2xl hover:bg-brand-500 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-brand-500 mb-6 shadow-md group-hover:text-brand-600 group-hover:scale-110 transition-transform">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-800 group-hover:text-white mb-3">Kitchen Remodels</h4>
+                    <p class="text-slate-600 group-hover:text-brand-50 leading-relaxed">
+                        Custom cabinets, islands, and modern layouts for your dream kitchen.
+                    </p>
+                </div>
+
+                <!-- Service 2: Bathroom Renovation -->
+                <div
+                    class="group relative p-8 bg-brand-50 rounded-2xl hover:bg-brand-500 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-brand-500 mb-6 shadow-md group-hover:text-brand-600 group-hover:scale-110 transition-transform">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-800 group-hover:text-white mb-3">Bathroom Renovations</h4>
+                    <p class="text-slate-600 group-hover:text-brand-50 leading-relaxed">
+                        Spa-inspired master baths, powder rooms, and functional upgrades.
+                    </p>
+                </div>
+
+                <!-- Service 3: Whole Home -->
+                <div
+                    class="group relative p-8 bg-brand-50 rounded-2xl hover:bg-brand-500 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-brand-500 mb-6 shadow-md group-hover:text-brand-600 group-hover:scale-110 transition-transform">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-800 group-hover:text-white mb-3">Whole Home</h4>
+                    <p class="text-slate-600 group-hover:text-brand-50 leading-relaxed">
+                        Complete interior and exterior makeovers to modernize your entire property.
+                    </p>
+                </div>
+
+                <!-- Service 4: ADU & Additions -->
+                <div
+                    class="group relative p-8 bg-brand-50 rounded-2xl hover:bg-brand-500 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-white rounded-xl flex items-center justify-center text-brand-500 mb-6 shadow-md group-hover:text-brand-600 group-hover:scale-110 transition-transform">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-800 group-hover:text-white mb-3">ADU & Additions</h4>
+                    <p class="text-slate-600 group-hover:text-brand-50 leading-relaxed">
+                        Expand your living space with room additions and Accessory Dwelling Units.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-brand-50 border-t border-brand-200">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-slate-600">
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-600 mb-4">Irvine Remodeling</h3>
+                    <p class="text-slate-500">
+                        Premier general contractor transforming homes in Irvine and Orange County.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-brand-600 mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-brand-500 transition-colors">Services</a></li>
+                        <li><a href="#contact" class="hover:text-brand-500 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-brand-600 mb-4">Contact</h4>
+                    <p class="mb-2">📞 (949) 555-0123</p>
+                    <p>📍 Irvine, CA</p>
+                    <p class="mt-4 text-sm text-slate-400">Licensed & Insured</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-brand-200 text-center text-slate-400 text-sm">
+                &copy; 2025 Irvine Home Remodeling. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>
