@@ -4,18 +4,362 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choosing a Contractor | Irvine Home Remodeling</title>
+    <title>Irvine Home Remodeling | General Contractor Services</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa', // Very light teal
+                            100: '#ccfbf1', // Light teal
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6', // Primary Teal
+                            600: '#0d9488',
+                        },
+                        accent: {
+                            50: '#f0f9ff', // Very light blue
+                            100: '#e0f2fe',
+                            400: '#38bdf8', // Sky blue
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        },
+                        cta: {
+                            500: '#f97316', // Orange-500
+                            600: '#ea580c', // Orange-600
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(204, 251, 241, 0.5);
+        }
+    </style>
 </head>
 
-<body class="font-sans antialiased text-slate-600 bg-brand-50">
-    <!-- Navbar will be consistent with other pages -->
-    <div class="min-h-screen flex flex-col items-center justify-center">
-        <h1 class="text-4xl font-bold text-slate-900 mb-4">Choosing a Contractor</h1>
-        <p class="text-xl text-slate-600">Content coming soon...</p>
-        <a href="/" class="mt-8 text-brand-600 hover:text-brand-700">Return Home</a>
-    </div>
+<body class="font-sans antialiased text-slate-600 bg-brand-50 selection:bg-brand-200 selection:text-teal-900">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row justify-between items-center py-4 lg:h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center mb-4 lg:mb-0">
+                    <a href="#" class="flex items-center gap-2 group">
+                        <!-- Icon (Simple House/Water drop combo) -->
+                        <div
+                            class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
+                            <span class="font-bold text-2xl">I</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span
+                                class="text-2xl font-bold text-slate-800 tracking-tight leading-none group-hover:text-brand-600 transition-colors">
+                                Irvine <span class="text-brand-600">Remodeling</span>
+                            </span>
+                            <span class="text-[0.65rem] font-bold text-slate-400 tracking-[0.2em] uppercase">Irvine,
+                                CA</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="/"
+                        class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-brand-600 after:transition-all hover:after:w-full">Home</a>
+                    <a href="#about"
+                        class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">About Us</a>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors py-2">
+                            Services
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="w-4 h-4 transition-transform group-hover:rotate-180">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute left-0 mt-0 w-64 bg-white/95 backdrop-blur-md rounded-lg shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 overflow-hidden">
+                            <div class="py-2">
+                                <a href="/kitchen_remodeling.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 border-b border-slate-50 last:border-0 transition-colors">Kitchen
+                                    Remodeling</a>
+                                <a href="/bathroom_renovation.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 border-b border-slate-50 last:border-0 transition-colors">Bathroom
+                                    Renovation</a>
+                                <a href="/room_additions_adu.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 border-b border-slate-50 last:border-0 transition-colors">Room
+                                    Additions & ADU</a>
+                                <a href="/painting.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 border-b border-slate-50 last:border-0 transition-colors">Painting</a>
+                                <a href="/roofing.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 border-b border-slate-50 last:border-0 transition-colors">Roofing</a>
+                                <a href="/hardscape.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">Hardscape</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors py-2">
+                            Resources
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="w-4 h-4 transition-transform group-hover:rotate-180">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute left-0 mt-0 w-64 bg-white/95 backdrop-blur-md rounded-lg shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50 overflow-hidden">
+                            <div class="py-2">
+                                <a href="/choosing_contractor.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 border-b border-slate-50 last:border-0 transition-colors">Choosing
+                                    a Contractor</a>
+                                <a href="/property.html"
+                                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">Property</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#projects"
+                        class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Projects</a>
+                    <a href="/contact.html"
+                        class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Contact</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="flex items-center gap-6 mt-4 lg:mt-0">
+                    <a href="tel:949-272-9132"
+                        class="hidden lg:flex items-center text-slate-700 font-bold hover:text-brand-600 transition-colors gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brand-500" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                                d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                        (949) 272-9132
+                    </a>
+                    <a href="/contact.html"
+                        class="px-6 py-3 bg-cta-500 hover:bg-cta-600 text-white rounded font-bold uppercase tracking-wide shadow-md transition-all transform hover:-translate-y-0.5 whitespace-nowrap">
+                        Free Estimate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Banner -->
+    <section class="relative pt-[74px] lg:pt-[96px] flex items-center justify-center min-h-[40vh] overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/choosing_contractor_banner.png" alt="Choosing a Contractor"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-900/60"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 mt-4 drop-shadow-md">
+                How to Choose the Right Contractor
+            </h1>
+            <p class="text-lg md:text-xl text-slate-100 max-w-2xl mb-6 mx-auto font-medium drop-shadow-sm">
+                A guide to protecting your investment and ensuring a successful remodel in Irvine.
+            </p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="prose prose-lg prose-slate mx-auto">
+            <p class="text-xl text-slate-600 leading-relaxed mb-8">
+                Remodeling your home is one of the most significant investments you'll make. The success of your project
+                depends largely on the General Contractor you choose. In Southern California's competitive market, it's
+                essential to know what to look for to avoid common pitfalls and ensure high-quality workmanship.
+            </p>
+        </div>
+    </section>
+
+    <!-- Key Considerations Grid -->
+    <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">4 Pillars of a Trustworthy Contractor
+                </h2>
+                <p class="text-xl text-slate-600 max-w-2xl mx-auto">Never compromise on these essential requirements.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Check 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center text-brand-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">1. Verified Licensing</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Always check the CSLB (Contractors State License Board) to ensure the contractor carries a
+                            valid Class B General Building Contractor license. Active status and a clean record are
+                            non-negotiable.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Check 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center text-brand-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">2. Comprehensive Insurance</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Protect yourself from liability. Your contractor must have General Liability Insurance (for
+                            property damage) and Workers' Compensation (for worker safety). Ask for proof of insurance
+                            certificates.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Check 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center text-brand-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">3. Local Experience</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            A contractor familiar with Irvine's specific HOA guidelines, city permitting processes, and
+                            building codes will save you time and prevent costly compliance delays.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Check 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6">
+                    <div
+                        class="flex-shrink-0 w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center text-brand-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">4. Transparent Communication</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Look for detailed written contracts that outline timelines, payments, and materials. A
+                            trustworthy contractor is transparent about costs and keeps you informed at every stage.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Red Flags -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">Warning Signs to Watch For</h2>
+        <div class="bg-red-50 border-l-4 border-red-500 p-8 rounded-r-lg">
+            <ul class="space-y-4 text-slate-700">
+                <li class="flex items-start">
+                    <span class="text-red-500 font-bold mr-3">⚠</span>
+                    Contractors asking for full payment upfront or cash-only deals.
+                </li>
+                <li class="flex items-start">
+                    <span class="text-red-500 font-bold mr-3">⚠</span>
+                    Lack of a physical office address or branded business vehicle.
+                </li>
+                <li class="flex items-start">
+                    <span class="text-red-500 font-bold mr-3">⚠</span>
+                    Pressure to sign a contract immediately ("Today only" discounts).
+                </li>
+                <li class="flex items-start">
+                    <span class="text-red-500 font-bold mr-3">⚠</span>
+                    Asking you to pull the building permits yourself (this puts liability on you!).
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-brand-600">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Start Your Project with Confidence</h2>
+            <p class="text-xl text-brand-100 mb-10 max-w-2xl mx-auto">
+                Irvine Remodeling meets and exceeds all industry standards. Licensed, insured, and dedicated to
+                excellence.
+            </p>
+            <a href="/contact.html"
+                class="inline-flex items-center justify-center px-10 py-4 border border-transparent text-xl font-medium rounded-full text-brand-600 bg-white hover:bg-brand-50 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                Schedule Your Free Construction Audit
+            </a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer id="contact" class="bg-brand-50 border-t border-brand-200">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-slate-600">
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-600 mb-4">Irvine Remodeling</h3>
+                    <p class="text-slate-500">
+                        Premier general contractor transforming homes in Irvine and Orange County.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-brand-600 mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Home</a></li>
+                        <li><a href="#services" class="hover:text-brand-500 transition-colors">Services</a></li>
+                        <li><a href="/contact.html" class="hover:text-brand-500 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-brand-600 mb-4">Contact</h4>
+                    <p class="mb-2">📞 (949) 555-0123</p>
+                    <p>📍 Irvine, CA</p>
+                    <p class="mt-4 text-sm text-slate-400">Licensed & Insured</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-brand-200 text-center text-slate-400 text-sm">
+                &copy; 2025 Irvine Home Remodeling. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 
 </html>
