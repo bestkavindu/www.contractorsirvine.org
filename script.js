@@ -29,6 +29,8 @@ tailwind.config = {
     },
   },
 };
+
+// Hero Slider
 const slides = document.querySelectorAll(".slide-img");
 const indicators = document.querySelectorAll(".indicator");
 let currentSlide = 0;
@@ -39,7 +41,6 @@ function showSlide(index) {
     slide.classList.remove("opacity-100");
     slide.classList.add("opacity-0");
 
-    // Update indicators
     if (indicators[i]) {
       indicators[i].classList.remove("opacity-100");
       indicators[i].classList.add("opacity-50");
@@ -62,10 +63,9 @@ function nextSlide() {
   showSlide(currentSlide);
 }
 
-// Auto play
+// Auto play Hero Slider
 let slideInterval = setInterval(nextSlide, 5000);
 
-// Click handlers for indicators
 indicators.forEach((indicator, index) => {
   indicator.addEventListener("click", () => {
     clearInterval(slideInterval);
@@ -74,3 +74,47 @@ indicators.forEach((indicator, index) => {
     slideInterval = setInterval(nextSlide, 5000);
   });
 });
+
+// Services Carousel
+const serviceTrack = document.getElementById("services-slider-track");
+if (serviceTrack) {
+  const serviceCards = serviceTrack.children;
+  const totalServiceSlides = serviceCards.length;
+  let currentServiceIndex = 0;
+
+  function moveServiceSlider() {
+    // Determine visible slides based on screen width
+    let slidesPerView = 1;
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      slidesPerView = 4;
+    } else if (window.matchMedia("(min-width: 768px)").matches) {
+      slidesPerView = 2;
+    }
+
+    const maxIndex = totalServiceSlides - slidesPerView;
+
+    // Increment index
+    currentServiceIndex++;
+    if (currentServiceIndex > maxIndex) {
+      currentServiceIndex = 0;
+    }
+
+    // Calculate translation in pixels for perfect alignment
+    // We measure the distance between the starts of the first two cards.
+    // This effectively gives us (CardWidth + Gap).
+    let slidePitch = 0;
+    if (totalServiceSlides > 1) {
+      slidePitch = serviceCards[1].offsetLeft - serviceCards[0].offsetLeft;
+    } else {
+      // Fallback for single item (rare case in this context)
+      slidePitch = serviceCards[0].offsetWidth;
+    }
+
+    const translatePx = slidePitch * currentServiceIndex;
+
+    serviceTrack.style.transform = `translateX(-${translatePx}px)`;
+  }
+
+  // Auto swipe every 4 seconds
+  setInterval(moveServiceSlider, 4000);
+}
