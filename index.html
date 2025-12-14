@@ -236,56 +236,6 @@
 
     </section>
 
-    <script>
-        const slides = document.querySelectorAll('.slide-img');
-        const indicators = document.querySelectorAll('.indicator');
-        let currentSlide = 0;
-        const totalSlides = slides.length;
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.remove('opacity-100');
-                slide.classList.add('opacity-0');
-
-                // Update indicators
-                if (indicators[i]) {
-                    indicators[i].classList.remove('opacity-100');
-                    indicators[i].classList.add('opacity-50');
-                }
-            });
-
-            if (slides[index]) {
-                slides[index].classList.remove('opacity-0');
-                slides[index].classList.add('opacity-100');
-            }
-
-            if (indicators[index]) {
-                indicators[index].classList.remove('opacity-50');
-                indicators[index].classList.add('opacity-100');
-            }
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
-
-        // Auto play
-        let slideInterval = setInterval(nextSlide, 5000);
-
-        // Click handlers for indicators
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                clearInterval(slideInterval);
-                currentSlide = index;
-                showSlide(currentSlide);
-                slideInterval = setInterval(nextSlide, 5000);
-            });
-        });
-    </script>
-
-
-
     <!-- About Section -->
     <section id="about" class="py-20 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -923,6 +873,51 @@
 </body>
 <!-- Testimonials Slider Script -->
 <script>
+    const slides = document.querySelectorAll('.slide-img');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('opacity-100');
+                slide.classList.add('opacity-0');
+
+                // Update indicators
+                if (indicators[i]) {
+                    indicators[i].classList.remove('opacity-100');
+                    indicators[i].classList.add('opacity-50');
+                }
+            });
+
+            if (slides[index]) {
+                slides[index].classList.remove('opacity-0');
+                slides[index].classList.add('opacity-100');
+            }
+
+            if (indicators[index]) {
+                indicators[index].classList.remove('opacity-50');
+                indicators[index].classList.add('opacity-100');
+            }
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Auto play
+        let slideInterval = setInterval(nextSlide, 5000);
+
+        // Click handlers for indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                currentSlide = index;
+                showSlide(currentSlide);
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+        });
     (function () {
         const track = document.getElementById('testimonials-slider-track');
         const cards = document.querySelectorAll('.testimonial-card');
