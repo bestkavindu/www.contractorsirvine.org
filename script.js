@@ -223,4 +223,81 @@ document.addEventListener("DOMContentLoaded", () => {
       easing: "ease-out-cubic",
     });
   }
+
+  // Mobile Menu Toggle
+  const btn = document.getElementById("mobile-menu-button");
+  const menu = document.getElementById("mobile-menu");
+  const hamburgerTop = document.getElementById("hamburger-top");
+  const hamburgerMiddle = document.getElementById("hamburger-middle");
+  const hamburgerBottom = document.getElementById("hamburger-bottom");
+
+  if (btn && menu) {
+    btn.addEventListener("click", () => {
+      const isOpen = !menu.classList.contains("hidden");
+      
+      if (isOpen) {
+        // Close menu
+        menu.classList.add("hidden");
+        // Reset hamburger icon
+        if (hamburgerTop) {
+          hamburgerTop.classList.remove("rotate-45", "translate-y-2");
+        }
+        if (hamburgerMiddle) {
+          hamburgerMiddle.classList.remove("opacity-0");
+        }
+        if (hamburgerBottom) {
+          hamburgerBottom.classList.remove("-rotate-45", "-translate-y-2");
+        }
+      } else {
+        // Open menu
+        menu.classList.remove("hidden");
+        // Animate to X icon
+        if (hamburgerTop) {
+          hamburgerTop.classList.add("rotate-45", "translate-y-2");
+        }
+        if (hamburgerMiddle) {
+          hamburgerMiddle.classList.add("opacity-0");
+        }
+        if (hamburgerBottom) {
+          hamburgerBottom.classList.add("-rotate-45", "-translate-y-2");
+        }
+      }
+    });
+  }
+
+  // Mobile Dropdown Toggles
+  const mobileDropdownBtns = document.querySelectorAll(".mobile-dropdown-btn");
+  mobileDropdownBtns.forEach((dropdownBtn) => {
+    dropdownBtn.addEventListener("click", () => {
+      const content = dropdownBtn.nextElementSibling;
+      const icon = dropdownBtn.querySelector("svg");
+      
+      if (content) {
+        content.classList.toggle("hidden");
+      }
+      if (icon) {
+        icon.classList.toggle("rotate-180");
+      }
+    });
+  });
+
+  // Close mobile menu when clicking on a link (except dropdown buttons)
+  const mobileMenuLinks = menu ? menu.querySelectorAll("a") : [];
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (menu && btn) {
+        menu.classList.add("hidden");
+        // Reset hamburger icon
+        if (hamburgerTop) {
+          hamburgerTop.classList.remove("rotate-45", "translate-y-2");
+        }
+        if (hamburgerMiddle) {
+          hamburgerMiddle.classList.remove("opacity-0");
+        }
+        if (hamburgerBottom) {
+          hamburgerBottom.classList.remove("-rotate-45", "-translate-y-2");
+        }
+      }
+    });
+  });
 });
