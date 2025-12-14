@@ -8,6 +8,10 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 
     <style>
         /* Smooth scrolling */
@@ -140,7 +144,7 @@
         </div>
 
         <!-- Content -->
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto" data-aos="fade-up">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-md">
                 Bathroom Renovation
             </h1>
@@ -153,7 +157,7 @@
     <!-- Intro Section: Remodel & Upgrade -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div data-aos="fade-right">
                 <span class="text-brand-600 font-bold tracking-wider uppercase text-sm mb-2 block">Irvine Bathroom
                     Remodeling Experts</span>
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Experience the Difference</h2>
@@ -175,7 +179,7 @@
                     Start Your Remodel
                 </a>
             </div>
-            <div class="relative">
+            <div class="relative" data-aos="fade-left">
                 <div class="absolute inset-0 bg-brand-200 rounded-2xl transform rotate-3 scale-105 opacity-50 z-0">
                 </div>
                 <img src="images/luxury_bathroom_intro.png" alt="Bathroom Remodeling Irvine"
@@ -194,7 +198,8 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Style 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                <div data-aos="zoom-in" data-aos-delay="100"
+                    class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
                     <div class="h-64 overflow-hidden">
                         <img src="images/bathroom_modern.png" alt="Modern Minimalist Bathroom"
                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
@@ -206,7 +211,8 @@
                     </div>
                 </div>
                 <!-- Style 2 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                <div data-aos="zoom-in" data-aos-delay="200"
+                    class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
                     <div class="h-64 overflow-hidden">
                         <img src="images/bathroom_spa.png" alt="Spa-Like Retreat"
                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
@@ -218,7 +224,8 @@
                     </div>
                 </div>
                 <!-- Style 3 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
+                <div data-aos="zoom-in" data-aos-delay="300"
+                    class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow group">
                     <div class="h-64 overflow-hidden">
                         <img src="images/bathroom_traditional.png" alt="Classic Traditional Bathroom"
                             class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
@@ -235,7 +242,7 @@
 
     <!-- Promise List -->
     <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16" data-aos="fade-up">
             <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Promise to You</h2>
             <p class="text-xl text-slate-600 max-w-2xl mx-auto">Rest assured that:</p>
         </div>
@@ -311,7 +318,7 @@
 
     <!-- Final CTA -->
     <section class="py-20 bg-brand-600">
-        <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Build Your Dream Bathroom?</h2>
             <p class="text-xl text-brand-100 mb-10 max-w-2xl mx-auto">Let's discuss your ideas. Schedule a free in-home
                 consultation with Irvine's top bathroom remodeling experts today.</p>
@@ -325,7 +332,7 @@
     <!-- Footer -->
     <footer id="contact" class="bg-brand-50 border-t border-brand-200">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-slate-600">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-slate-600" data-aos="fade-up">
                 <div>
                     <div class="flex flex-col mb-4">
                         <span
@@ -383,6 +390,6 @@
     </footer>
 
 </body>
-<script src="script.js"></script>
+
 
 </html>

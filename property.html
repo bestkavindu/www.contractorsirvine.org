@@ -8,40 +8,10 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#f0fdfa', // Very light teal
-                            100: '#ccfbf1', // Light teal
-                            200: '#99f6e4',
-                            300: '#5eead4',
-                            400: '#2dd4bf',
-                            500: '#14b8a6', // Primary Teal
-                            600: '#0d9488',
-                        },
-                        accent: {
-                            50: '#f0f9ff', // Very light blue
-                            100: '#e0f2fe',
-                            400: '#38bdf8', // Sky blue
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                        },
-                        cta: {
-                            500: '#f97316', // Orange-500
-                            600: '#ea580c', // Orange-600
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
     <style>
         /* Smooth scrolling */
         html {
@@ -174,7 +144,7 @@
         </div>
 
         <!-- Content -->
-        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto" data-aos="fade-up">
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mt-4 text-white mb-6 drop-shadow-md">
                 Maximize Your Irvine Property Value
             </h1>
@@ -199,14 +169,14 @@
     <!-- Top Projects Section -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Top 4 ROI Remodeling Projects</h2>
                 <p class="text-xl text-slate-600 max-w-2xl mx-auto">Invest where it counts the most.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
                 <!-- Project 1: ADU -->
-                <div
+                <div data-aos="fade-up" data-aos-delay="0"
                     class="bg-brand-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow border border-brand-100 flex flex-col">
                     <img src="images/adu_banner.png" alt="ADU & Room Additions" class="w-full h-64 object-cover">
                     <div class="p-8 flex-1 flex flex-col">
@@ -223,7 +193,7 @@
                 </div>
 
                 <!-- Project 2: Kitchens -->
-                <div
+                <div data-aos="fade-up" data-aos-delay="100"
                     class="bg-brand-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow border border-brand-100 flex flex-col">
                     <img src="images/luxury_kitchen_intro.png" alt="Kitchen Remodel" class="w-full h-64 object-cover">
                     <div class="p-8 flex-1 flex flex-col">
@@ -239,7 +209,7 @@
                 </div>
 
                 <!-- Project 3: Curb Appeal -->
-                <div
+                <div data-aos="fade-up" data-aos-delay="200"
                     class="bg-brand-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow border border-brand-100 flex flex-col">
                     <img src="images/hardscape_driveway.png" alt="Curb Appeal - Hardscape"
                         class="w-full h-64 object-cover">
@@ -256,7 +226,7 @@
                 </div>
 
                 <!-- Project 4: Bathrooms -->
-                <div
+                <div data-aos="fade-up" data-aos-delay="300"
                     class="bg-brand-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow border border-brand-100 flex flex-col">
                     <img src="images/bathroom_spa.png" alt="Master Bathroom" class="w-full h-64 object-cover">
                     <div class="p-8 flex-1 flex flex-col">
@@ -276,7 +246,7 @@
 
     <!-- Market Insight/Graph Placeholder -->
     <section class="py-16 bg-slate-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
             <h2 class="text-3xl font-bold text-slate-900 mb-8">The "Turnkey" Premium</h2>
             <p class="text-xl text-slate-600 mb-10">
                 Data shows that updated, "move-in ready" homes in Irvine sell <strong>30% faster</strong> and for
@@ -321,7 +291,7 @@
     <!-- Footer -->
     <footer id="contact" class="bg-brand-50 border-t border-brand-200">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-slate-600">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-slate-600" data-aos="fade-up">
                 <div>
                     <div class="flex flex-col mb-4">
                         <span

@@ -8,40 +8,10 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#f0fdfa', // Very light teal
-                            100: '#ccfbf1', // Light teal
-                            200: '#99f6e4',
-                            300: '#5eead4',
-                            400: '#2dd4bf',
-                            500: '#14b8a6', // Primary Teal
-                            600: '#0d9488',
-                        },
-                        accent: {
-                            50: '#f0f9ff', // Very light blue
-                            100: '#e0f2fe',
-                            400: '#38bdf8', // Sky blue
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                        },
-                        cta: {
-                            500: '#f97316', // Orange-500
-                            600: '#ea580c', // Orange-600
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
     <style>
         /* Smooth scrolling */
         html {
@@ -173,7 +143,7 @@
         </div>
 
         <!-- Content -->
-        <div class="relative z-10 text-center max-w-4xl mx-auto">
+        <div class="relative z-10 text-center max-w-4xl mx-auto" data-aos="fade-up">
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 mt-4 drop-shadow-md">
                 How to Choose the Right Contractor
             </h1>
@@ -197,7 +167,7 @@
     <!-- Key Considerations Grid -->
     <section class="py-16 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">4 Pillars of a Trustworthy Contractor
                 </h2>
                 <p class="text-xl text-slate-600 max-w-2xl mx-auto">Never compromise on these essential requirements.
@@ -206,7 +176,8 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <!-- Check 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6" data-aos="fade-up"
+                    data-aos-delay="0">
                     <div
                         class="flex-shrink-0 w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center text-brand-600">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
@@ -226,7 +197,8 @@
                 </div>
 
                 <!-- Check 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6" data-aos="fade-up"
+                    data-aos-delay="100">
                     <div
                         class="flex-shrink-0 w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center text-brand-600">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
@@ -246,7 +218,8 @@
                 </div>
 
                 <!-- Check 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6" data-aos="fade-up"
+                    data-aos-delay="200">
                     <div
                         class="flex-shrink-0 w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center text-brand-600">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
@@ -265,7 +238,8 @@
                 </div>
 
                 <!-- Check 4 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex gap-6" data-aos="fade-up"
+                    data-aos-delay="300">
                     <div
                         class="flex-shrink-0 w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center text-brand-600">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
@@ -287,7 +261,7 @@
     </section>
 
     <!-- Red Flags -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto" data-aos="fade-up">
         <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">Warning Signs to Watch For</h2>
         <div class="bg-red-50 border-l-4 border-red-500 p-8 rounded-r-lg">
             <ul class="space-y-4 text-slate-700">
@@ -328,7 +302,7 @@
     <!-- Footer -->
     <footer id="contact" class="bg-brand-50 border-t border-brand-200">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-slate-600">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 text-slate-600" data-aos="fade-up">
                 <div>
                     <div class="flex flex-col mb-4">
                         <span
